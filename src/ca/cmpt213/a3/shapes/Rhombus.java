@@ -24,7 +24,14 @@ public class Rhombus extends ShapeImpl{
     }
 
     protected boolean isInside(int x, int y){
-        //Make sure the cell is inside the bounding box
+        //Get one cell less than the 'radius' or side length of rhombus
+        int radius = super.getWidth()/2;
+
+        //Treat the rhombus like a circle
+        //Track distance from the 'radius' to fin the border
+        if(getDistance(x, y, super.getLocationX() + radius, super.getLocationY() + radius) < radius)
+            return true;
+
         return false;
     }
 
