@@ -29,8 +29,9 @@ public class MainGUI {
         // Select the pictures to test:
         // (Comment / Uncomment these calls as you like during testing)
         List<PicturePanel> pictures = new ArrayList<>();
-        pictures.add(makeRectanglesPicture());
-//		pictures.add(makeRhombusesPicture());
+
+//        pictures.add(makeRectanglesPicture());
+		pictures.add(makeRhombusesPicture());
 //		pictures.add(makeTextBoxesPicture());
 //		pictures.add(makeMixedPicture());
 //		pictures.add(makeFrontAndBackPicture());
