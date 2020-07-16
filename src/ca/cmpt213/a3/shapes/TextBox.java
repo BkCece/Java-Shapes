@@ -35,30 +35,24 @@ public class TextBox extends Rectangle {
         //Split message into words
         String[] words = getMessage().split(" ");
 
-
         //Add words to word list
         List<String> wordList = new ArrayList<>();
         for (int w = 0; w < words.length; w++) {
                 wordList.add(words[w]);
         }
 
+        //Adjust for preceding spaces
         if(getMessage().charAt(0) == ' '){
             wordList.remove(0);
             wordList.set(0, " " + wordList.get(0));
         }
 
-        System.out.println(wordList);
+        //System.out.println(wordList);
 
         //Initialize empty array to store each row's message
         String[] msgByRow = new String[super.getHeight() - 2];
         for (int m = 0; m < msgByRow.length; m++)
             msgByRow[m] = " ";
-
-        //System.out.println(wordList + ", " + wordList.size());
-        //System.out.println((super.getWidth() - 2));
-        //System.out.println(msgByRow.length);
-
-        //If row size < word length
 
         //Determine which words are in each row
         for (int i = 0; i < msgByRow.length; i++) {
@@ -66,24 +60,21 @@ public class TextBox extends Rectangle {
             //Compare the size of each word to available space
             while (wordList.size() > 0) {
                 if (msgByRow[i].equals(" ")) {
-                    //System.out.println((super.getWidth() - 2) < wordList.get(0).length());
 
                     //Check if the word needs to be wrapped
                     if((super.getWidth() - 2) < wordList.get(0).length()){
-                        //System.out.println("for");
+
                         //Iterate through characters in the word
                         for(int l = 0; l < (super.getWidth() - 2); l++){
                             if (l == 0){
-                                //System.out.println("start l");
                                 msgByRow[i] = Character.toString(wordList.get(0).charAt(0));
+
                             }else{
-                                //System.out.println("add l");
                                 msgByRow[i] += Character.toString(wordList.get(0).charAt(0));
                             }
 
                             //Remove first char in the word
                             wordList.set(0, wordList.get(0).substring(1));
-                            //System.out.println("substring: " + msgByRow[i]);
                         }
 
                     }else{
@@ -94,8 +85,6 @@ public class TextBox extends Rectangle {
                         wordList.remove(0);
                     }
 
-//                    System.out.println("Message start: " + msgByRow[i] + ", words: " + wordList);
-
                 } else if (((super.getWidth() - 2) - msgByRow[i].length()) >= wordList.get(0).length()) {
                     //Add word to row if it fits in available space
                     msgByRow[i] += wordList.get(0) + " ";
@@ -103,19 +92,14 @@ public class TextBox extends Rectangle {
                     //Remove word from list once placed
                     wordList.remove(0);
 
-//                    System.out.println("Message add: " + msgByRow[i] + ", words: " + wordList);
-
                 } else {
                     //move to next row
                     break;
                 }
             }
-//            System.out.println("Move to new row: " + msgByRow[i] + ", words: " + wordList);
 
-            //System.out.println(msgByRow[i]);
             //Trim trailing spaces
             msgByRow[i] = msgByRow[i].stripTrailing();
-            //System.out.println(msgByRow[i]);
 
             //Center the message row
             int numEmptySpaces = (super.getWidth() - 2) - msgByRow[i].length();
@@ -132,7 +116,6 @@ public class TextBox extends Rectangle {
 
 //            System.out.println("Message for row " + i + "is: " + msgByRow[i]);
         }
-
 
         /**
          * Display the message to canvas

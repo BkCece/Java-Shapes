@@ -32,9 +32,9 @@ public class MainGUI {
 
 //        pictures.add(makeRectanglesPicture());
 //		pictures.add(makeRhombusesPicture());
-		pictures.add(makeTextBoxesPicture());
+//		pictures.add(makeTextBoxesPicture());
 //		pictures.add(makeMixedPicture());
-//		pictures.add(makeFrontAndBackPicture());
+		pictures.add(makeFrontAndBackPicture());
 
 
 

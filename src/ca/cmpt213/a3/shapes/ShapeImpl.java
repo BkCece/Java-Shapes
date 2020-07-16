@@ -61,6 +61,7 @@ abstract class ShapeImpl implements Shape{
                     //Coloured background and border character
                     canvas.setCellColor(x, y, getColor());
                     canvas.setCellText(x, y, getBorderChar());
+
                 }else if(isInside(x, y)){
                     //Coloured background
                     canvas.setCellColor(x, y, getColor());
