@@ -90,31 +90,30 @@ public class TextBox extends Rectangle {
 //                    System.out.println("Message add: " + msgByRow[i] + ", words: " + wordList);
 
                 } else {
-
-                    //trim the trailing space
-                    msgByRow[i].trim();
-
-
-                     //prepend and append spaces to center text
-                     int emptySpace = (super.getWidth() - 2) - msgByRow[i].length();
-
-                     //Even number of spaces to distribute to start and end of row
-                    for (int k = 0; k < emptySpace/2; k++){
-                        msgByRow[i] = " " + msgByRow[i] + " ";
-                    }
-
-                     if(emptySpace % 2 != 0){
-                     //Odd number of spaces to distribute
-                         msgByRow[i] = " " + msgByRow[i];
-                     }
-
-                    System.out.println("Message for row " + i + "is: " + msgByRow[i]);
-
                     //move to next row
                     break;
                 }
             }
 //            System.out.println("Move to new row: " + msgByRow[i] + ", words: " + wordList);
+
+            //Trim trailing spaces
+            msgByRow[i] = msgByRow[i].trim();
+
+            //Center row
+            int numEmptySpaces = (super.getWidth() - 2) - msgByRow[i].length();
+
+            //Check for free cells to fill with spaces
+            if (numEmptySpaces != 0){
+                for (int n = 0; n < numEmptySpaces/2; n++)
+                    msgByRow[i] = " " + msgByRow[i] + " ";
+
+                //Offset with extra space prepended, if uneven
+                if(numEmptySpaces % 2 != 0)
+                    msgByRow[i] = " " + msgByRow[i];
+            }
+
+
+            System.out.println("Message for row " + i + "is: " + msgByRow[i]);
         }
 
 /**
