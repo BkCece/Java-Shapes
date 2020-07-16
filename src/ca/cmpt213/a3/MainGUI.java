@@ -31,8 +31,8 @@ public class MainGUI {
         List<PicturePanel> pictures = new ArrayList<>();
 
 //        pictures.add(makeRectanglesPicture());
-		pictures.add(makeRhombusesPicture());
-//		pictures.add(makeTextBoxesPicture());
+//		pictures.add(makeRhombusesPicture());
+		pictures.add(makeTextBoxesPicture());
 //		pictures.add(makeMixedPicture());
 //		pictures.add(makeFrontAndBackPicture());
 

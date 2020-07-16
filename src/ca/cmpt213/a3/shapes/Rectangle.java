@@ -10,11 +10,14 @@ public class Rectangle extends ShapeImpl{
         //return true if border
         if(super.getLocationX() == x) //top border
             return true;
-        else if (super.getLocationY() == y) //left border
+
+        if (super.getLocationY() == y) //left border
             return true;
-        else if((super.getLocationX() + super.getWidth() - 1) == x) //right border
+
+        if((super.getLocationX() + super.getWidth() - 1) == x) //right border
             return true;
-        else if ((super.getLocationY() + super.getHeight() - 1) == y) //bottom border
+
+        if ((super.getLocationY() + super.getHeight() - 1) == y) //bottom border
             return true;
 
         //return false if not
@@ -22,13 +25,21 @@ public class Rectangle extends ShapeImpl{
     }
 
     protected boolean isInside(int x, int y){
-        //return true if inside
-        if((super.getLocationX() < x) && ((super.getLocationX() + super.getWidth() - 1) > x))
-            return true;
-        else if ((super.getLocationY() < y) && ((super.getLocationY() + super.getHeight() - 1) > y))
-            return true;
+        //return false if outside bounds
+        if(x <= super.getLocationX())
+            return false;
 
-        //return false if not
-        return false;
+        if(x >= (super.getLocationX() + super.getWidth() - 1))
+            return false;
+
+        if(y <= super.getLocationY())
+            return false;
+
+        if(y >= (super.getLocationY() + super.getHeight() - 1))
+            return false;
+
+        //return true if inside
+        return true;
+
     }
 }

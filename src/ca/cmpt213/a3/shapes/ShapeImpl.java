@@ -55,8 +55,8 @@ abstract class ShapeImpl implements Shape{
      * Sets cell colour and/or border character
      */
     public void draw(Canvas canvas){
-        for(int x = locationX; x <= (locationX + width - 1); x++){
-            for(int y = locationY; y <= (locationY + height - 1); y++){
+        for(int y = getLocationY(); y <= (getLocationY() + getHeight() - 1); y++){
+            for(int x = getLocationX(); x <= (getLocationX() + getWidth() - 1); x++){
                 if(isBorder(x, y)){
                     //Coloured background and border character
                     canvas.setCellColor(x, y, getColor());
