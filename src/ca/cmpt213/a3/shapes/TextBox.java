@@ -3,7 +3,6 @@ package ca.cmpt213.a3.shapes;
 import ca.cmpt213.a3.UI.Canvas;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class TextBox extends Rectangle {
