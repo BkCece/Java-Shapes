@@ -1,5 +1,11 @@
 package ca.cmpt213.a3.UI;
 
+/**
+ * Celina Wright
+ * 301380112
+ * ckwright@sfu.ca
+ */
+
 import ca.cmpt213.a3.shapes.Shape;
 
 import java.awt.BorderLayout;

@@ -1,5 +1,10 @@
 package ca.cmpt213.a3.shapes;
 
+/**
+ * Celina Wright
+ * 301380112
+ * ckwright@sfu.ca
+ */
 
 import ca.cmpt213.a3.UI.Canvas;
 

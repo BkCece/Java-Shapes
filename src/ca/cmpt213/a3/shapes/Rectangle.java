@@ -1,5 +1,11 @@
 package ca.cmpt213.a3.shapes;
 
+/**
+ * Celina Wright
+ * 301380112
+ * ckwright@sfu.ca
+ */
+
 public class Rectangle extends ShapeImpl{
 
     public Rectangle (int x, int y, int w, int h){
@@ -8,16 +14,20 @@ public class Rectangle extends ShapeImpl{
 
     protected boolean isBorder(int x, int y){
         //return true if border
-        if(super.getLocationX() == x) //top border
+
+        // left border
+        if(super.getLocationX() == x)
+            return true;
+        //top border
+        if (super.getLocationY() == y)
             return true;
 
-        if (super.getLocationY() == y) //left border
+        //right border
+        if((super.getLocationX() + super.getWidth() - 1) == x)
             return true;
 
-        if((super.getLocationX() + super.getWidth() - 1) == x) //right border
-            return true;
-
-        if ((super.getLocationY() + super.getHeight() - 1) == y) //bottom border
+        //bottom border
+        if ((super.getLocationY() + super.getHeight() - 1) == y)
             return true;
 
         //return false if not

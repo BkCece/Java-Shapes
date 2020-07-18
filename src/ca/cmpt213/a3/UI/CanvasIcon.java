@@ -1,5 +1,11 @@
 package ca.cmpt213.a3.UI;
 
+/**
+ * Celina Wright
+ * 301380112
+ * ckwright@sfu.ca
+ */
+
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Graphics;

@@ -1,5 +1,11 @@
 package ca.cmpt213.a3;
 
+/**
+ * Celina Wright
+ * 301380112
+ * ckwright@sfu.ca
+ */
+
 import ca.cmpt213.a3.UI.PicturePanel;
 import ca.cmpt213.a3.shapes.Rectangle;
 import ca.cmpt213.a3.shapes.Rhombus;
@@ -32,8 +38,8 @@ public class MainGUI {
 
 //        pictures.add(makeRectanglesPicture());
 //		pictures.add(makeRhombusesPicture());
-		pictures.add(makeTextBoxesPicture());
-		pictures.add(makeMixedPicture());
+//		pictures.add(makeTextBoxesPicture());
+//		pictures.add(makeMixedPicture());
 		pictures.add(makeFrontAndBackPicture());
 
 

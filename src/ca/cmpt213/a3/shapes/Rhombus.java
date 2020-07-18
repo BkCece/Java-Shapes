@@ -1,5 +1,11 @@
 package ca.cmpt213.a3.shapes;
 
+/**
+ * Celina Wright
+ * 301380112
+ * ckwright@sfu.ca
+ */
+
 public class Rhombus extends ShapeImpl{
 
     public Rhombus (int x, int y, int size){
