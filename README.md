@@ -14,12 +14,13 @@
 
 # Unified Modeling Language Designs
 ## The Recommended Shape Class Heirarchy
+![Shape Class Heirarchy](Shapes_UML.JPG)
 
 ## A Simplified UML Class Diagram - Shapes and Client
+![Shapes and Client UML](Shapes_Client_UML.JPG)
 
-## Suggested UML with Class Content
-
-
+## The Suggested UML with Full (Shapes) Class Structure
+![Full UML with Class methods](Shapes_UML_Content.JPG)
 
 ## Resources
 - Class to print JSON in [pretty format](https://github.com/drbfraser/SpringBootIntro/blob/master/src/main/java/ca/pledgetovote/controllers/MakeSpringPrettyPrintJSON.java)
